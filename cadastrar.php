@@ -1,5 +1,5 @@
 <?php 
-	 header("Access-Control-Allow-Origin: *");
+	header("Access-Control-Allow-Origin: *");
 	if(isset($_GET['cadastrar']) && !empty($_GET['nome']) && !empty($_GET['email']) && !empty($_GET['senha'])){
 
 		require_once 'Connect.php';
@@ -29,5 +29,7 @@
 				echo json_encode($retorno);
 			}
 		}
+	}else{
+		echo "requisição sem parametros!";
 	}
 	
