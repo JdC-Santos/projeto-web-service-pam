@@ -1,14 +1,14 @@
 <?php 
 	header("Access-Control-Allow-Origin: *");
-	if(isset($_GET['cadastrar']) && !empty($_GET['nome']) && !empty($_GET['email']) && !empty($_GET['senha'])){
+	if(isset($_POST['cadastrar']) && !empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['senha'])){
 
 		require_once 'Connect.php';
 
-		$nome = addslashes($_GET['nome']);
-		$email = addslashes($_GET['email']);
-		$senha  = md5($_GET['senha']);
+		$nome = addslashes($_POST['nome']);
+		$email = addslashes($_POST['email']);
+		$senha  = md5($_POST['senha']);
 
-		$query = "SELECT * FROM usuario WHERE email_usuario = '".$_GET['email']."' ";
+		$query = "SELECT * FROM usuario WHERE email_usuario = '".$_POST['email']."' ";
 		$sql = $conn->prepare($query);
 		$sql->execute();
 		$res = $sql->fetch();
