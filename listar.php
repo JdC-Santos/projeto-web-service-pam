@@ -1,6 +1,6 @@
 <?php 
 	header("Access-Control-Allow-Origin: *");
-	if(isset($_POST['listar'])){
+	if(isset($_GET['listar'])){
 
 		require_once 'Connect.php';
 
