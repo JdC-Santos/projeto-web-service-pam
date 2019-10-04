@@ -13,6 +13,9 @@
 			$usuarios = [];
 			$i = 0;
 			foreach($res as $key => $value){
+				
+				print_r($value);
+				echo "<br>";
 				$usuarios[$i]['cd'] = $value['cd_usuario'];
 				$usuarios[$i]['nome'] = $value['nm_usuario'];
 				$usuarios[$i]['email'] = $value['email_usuario'];
