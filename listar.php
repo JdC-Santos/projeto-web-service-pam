@@ -10,8 +10,17 @@
 		$res = $sql->fetch();
 		
 		if(is_array($res)){
+			$usuarios = [];
+			$i = 0;
+			foreach($res as $key => $value){
+				$usuarios[$i]['cd'] = $value['cd_usuario'];
+				$usuarios[$i]['nome'] = $value['nm_usuario'];
+				$usuarios[$i]['email'] = $value['email_usuario'];
+				$i++;
+			}
+
 			$retorno['status'] = 1;
-			$retorno['usuarios'] = json_decode($res);
+			$retorno['usuarios'] = $usuarios;
 			echo json_encode($retorno);
 		}else{
 			$retorno['status'] = 0;
