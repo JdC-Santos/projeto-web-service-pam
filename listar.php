@@ -11,7 +11,7 @@
 		
 		if(is_array($res)){
 			$retorno['status'] = 1;
-			$retorno['usuarios'] = $res;
+			$retorno['usuarios'] = json_decode($res);
 			echo json_encode($retorno);
 		}else{
 			$retorno['status'] = 0;
