@@ -19,7 +19,7 @@
 			$retorno['usuarios'] = 'usuario atualizado com sucesso';
 			echo json_encode($retorno);
 		}else{
-			$retorno['status'] = 1;
+			$retorno['status'] = 0;
 			$retorno['usuarios'] = 'Erro: não foi possivel editar o usuário';
 			echo json_encode($retorno);
 		}
