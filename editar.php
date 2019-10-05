@@ -16,11 +16,11 @@
 		$sql = $conn->prepare($query);
 		if($sql->execute()){
 			$retorno['status'] = 1;
-			$retorno['usuarios'] = 'usuario atualizado com sucesso';
+			$retorno['msg'] = 'usuario atualizado com sucesso';
 			echo json_encode($retorno);
 		}else{
 			$retorno['status'] = 0;
-			$retorno['usuarios'] = 'Erro: não foi possivel editar o usuário';
+			$retorno['msg'] = 'Erro: não foi possivel editar o usuário';
 			echo json_encode($retorno);
 		}
 	}else{
