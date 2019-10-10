@@ -1,6 +1,6 @@
 <?php 
 	header("Access-Control-Allow-Origin: *");
-	if(isset($_POST['excuir'])){
+	if(isset($_POST['excluir'])){
 
 		require_once 'Connect.php';
 
