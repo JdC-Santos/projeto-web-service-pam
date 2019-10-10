@@ -4,7 +4,8 @@
 
 		require_once 'Connect.php';
 
-		$query = "DELETE FROM usuario WHERE cd_usuario = ".$_POST['excuir']." LIMIT 1";
+		$query = "DELETE FROM usuario WHERE cd_usuario = ".$_POST['excluir']." LIMIT 1";
+		echo $query;
 		$sql = $conn->prepare($query);
 		if($sql->execute()){
 			$retorno['status'] = 1;
